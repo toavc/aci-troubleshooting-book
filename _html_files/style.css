@@ -1,6 +1,6 @@
 /* Basic Reset / Body Style */
 body {
-    font-family: Arial, sans-serif; /* Simple, common font */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern system fonts */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,75 +8,150 @@ body {
     color: #333; /* Dark grey text color */
 }
 
-/* Main Container */
-.main-container {
-    width: 80%; /* Limit the width */
-    max-width: 960px; /* Set a max width */
-    margin: 20px auto; /* Center the container horizontally with some top/bottom margin */
-    padding: 20px;
+/* Main Layout Container using Flexbox */
+.container {
+    display: flex;
+    max-width: 1400px; /* Wider layout */
+    min-height: 100vh; /* Ensure it takes at least full viewport height */
+    margin: 0 auto; /* Center the container */
     background-color: #fff; /* White background for the content area */
-    border: 1px solid #ddd; /* Subtle border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Slight shadow effect */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
 }
 
-/* Header */
-header h1 {
-    color: #0056b3; /* A blue color for the main heading */
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
+/* Sidebar Styles */
+.sidebar {
+    flex: 0 0 260px; /* Fixed width, don't grow or shrink */
+    background-color: #f8f9fa; /* Very light grey for sidebar */
+    padding: 25px;
+    border-right: 1px solid #dee2e6; /* Subtle border */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 15px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
 }
 
-/* Navigation */
-.navigation {
-    text-align: center;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #0056b3; /* Link color */
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 0.95em;
+}
+
+.sidebar a:hover,
+.sidebar a.active { /* Style for hover and potential active link */
+    background-color: #e9ecef; /* Light background on hover/active */
+    color: #003d80; /* Darker blue on hover/active */
+}
+
+/* Main Content Area Styles */
+.main-content {
+    flex: 1; /* Takes the remaining space */
+    padding: 30px 40px; /* More padding */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Header within Main Content */
+.main-content header {
+    border-bottom: 2px solid #eee;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #0056b3;
-    margin: 0 15px; /* Spacing between links */
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+.main-content header h1 {
+    color: #343a40; /* Darker heading color */
+    margin: 0 0 5px 0; /* Adjust margins */
+    font-size: 2.2em;
 }
-
-.navigation a:hover {
-    background-color: #e9ecef; /* Light background on hover */
-    color: #003d80;
-}
-
-.navigation a.active {
-    font-weight: bold;
-    color: #333;
-    background-color: #f0f0f0; /* Slightly different background for active link */
+.main-content header p {
+    color: #6c757d; /* Grey color for subtitle */
+    font-size: 1.1em;
+    margin-top: 0;
 }
 
 
-/* Content Blocks */
+/* Content Blocks within Main Content */
 .content-block {
-    margin-bottom: 25px; /* Space below each block */
-    padding: 15px;
-    background-color: #fdfdfd; /* Very light background for blocks */
-    border-left: 4px solid #007bff; /* Blue left border for emphasis */
+    margin-bottom: 35px; /* More space below each block */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0; /* Lighter separator */
+}
+.content-block:last-child {
+    border-bottom: none; /* Remove border from last block */
 }
 
 .content-block h2 {
-    color: #333;
-    margin-top: 0; /* Remove default top margin for h2 inside the block */
-    margin-bottom: 10px;
+    color: #0056b3; /* Blue for section titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6em;
 }
 
-/* Footer */
-footer {
+.content-block p,
+.content-block ul {
+    margin-bottom: 15px;
+}
+
+.content-block ul {
+    padding-left: 20px; /* Indent list */
+}
+.content-block li {
+    margin-bottom: 8px;
+}
+
+.content-block strong { /* Style for bold text */
+    color: #28a745; /* Green color for emphasis */
+}
+
+/* Footer within Main Content */
+.main-content footer {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid #eee;
     font-size: 0.9em;
     color: #777;
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-basis: auto; /* Reset fixed width */
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        min-height: auto; /* Allow sidebar height to adjust */
+        max-height: 40vh; /* Limit height on small screens */
+    }
+
+    .main-content {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+     .main-content header h1 {
+        font-size: 1.8em;
+    }
+     .content-block h2 {
+        font-size: 1.4em;
+    }
 }

@@ -3,48 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Site - Home</title>
+    <title>ACI Troubleshooting Book</title>
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="main-container">
-        <header>
-            <h1>Welcome to My Simple Static Site</h1>
-        </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#common-issues">Common Issues</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#fabric-discovery">Fabric Discovery</a></li>
+                <li><a href="#endpoint-connectivity">Endpoint Connectivity</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </aside>
 
-        <nav class="navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="page2.html">About</a>
-            <a href="page3.html">Contact</a>
-            <!-- Add links to page2.html, page3.html etc. -->
-        </nav>
+        <main class="main-content">
+            <header>
+                <h1>ACI Troubleshooting Book</h1>
+                <p>A practical guide to troubleshooting Cisco ACI</p>
+            </header>
 
-        <div class="content-block">
-            <h2>Section One</h2>
-            <p>
-                This is the first content block on the main page. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nullam tincidunt, urna ac fermentum varius,
-                nisi sapien rhoncus dolor, ac elementum odio elit vel erat.
-            </p>
-        </div>
+            <div class="content-block" id="introduction">
+                <h2>Introduction to ACI Troubleshooting</h2>
+                <p>
+                    Cisco Application Centric Infrastructure (ACI) is a powerful Software-Defined Networking (SDN) solution, but like any complex system, it requires a systematic approach to troubleshooting. Understanding the core ACI components, such as APIC, Spine, Leaf, EPGs, and Contracts, is the first step towards effective diagnostics.
+                </p>
+                <p>
+                    This resource is intended for network engineers working with ACI and provides information on common problems, diagnostic methods, and useful tools. We will cover both fabric-level issues and complexities related to endpoint connectivity and policy enforcement.
+                </p>
+            </div>
 
-        <div class="content-block">
-            <h2>Section Two</h2>
-            <p>
-                Here is another section with some different text. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-                Feel free to replace this placeholder text with your actual content.
-            </p>
-        </div>
+            <div class="content-block" id="common-issues">
+                <h2>Common Troubleshooting Scenarios</h2>
+                <p>
+                    When working with ACI, engineers often encounter a set of typical problems. These include:
+                </p>
+                <ul>
+                    <li>Fabric Discovery Issues.</li>
+                    <li>Lack of connectivity between Endpoints within the same or different EPGs.</li>
+                    <li>Incorrect application of Contracts and Filters.</li>
+                    <li>Problems with L4-L7 service integration.</li>
+                    <li>Difficulties connecting to external networks (L3Out).</li>
+                    <li>APIC configuration errors or policy faults.</li>
+                </ul>
+                 <p>
+                    Each of these problems has its own diagnostic techniques, involving checking object states in the GUI/CLI/API, analyzing logs, and using built-in ACI tools like the <strong>Endpoint Tracker</strong> or the <strong>Troubleshooting Wizard</strong>.
+                </p>
+            </div>
 
-        <footer>
-            <p>© 2024 Your Name or Company. Hosted on Read the Docs.</p>
-        </footer>
+            <footer>
+                <p>© 2025 Andres Vega. Hosted on Read the Docs.</p>
+            </footer>
+        </main>
     </div>
 
 </body>
