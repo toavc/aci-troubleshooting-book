@@ -3,15 +3,11 @@ import os
 import sys
 # Если _html_files лежит рядом с docs/, то путь будет '../_html_files'
 # Если _html_files лежит в корне, а docs/ тоже в корне, путь будет '../_html_files'
-html_extra_path = ['../_html_files'] # <-- Оставляем это, чтобы копировались CSS и другие ресурсы.
+# Возвращаем html_extra_path к копированию всей директории _html_files.
+# Идея в том, что index.html из этой директории перезапишет тот, что сгенерирован из index.rst.
+html_extra_path = ['../_html_files']
 
-# Указываем Sphinx использовать наши HTML-файлы для конкретных страниц
-# Ключ - имя страницы без .html (как оно будет в URL), значение - путь к исходному HTML-файлу относительно conf.py
-html_additional_pages = {
-    'index': '../_html_files/index.html',  # Говорим использовать наш index.html для корневой страницы
-    # Добавьте сюда другие ваши HTML-страницы по аналогии:
-    # 'имя_вашей_страницы': '../_html_files/имя_вашего_файла.html',
-}
+# Убираем html_additional_pages, чтобы избежать конфликтов.
 
 # Минимальные обязательные настройки Sphinx
 project = 'ACI Troubleshooting Book' # Можно любое название
