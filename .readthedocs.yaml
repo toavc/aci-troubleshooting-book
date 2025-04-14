@@ -16,10 +16,11 @@ build:
       # Диагностика: Показываем содержимое _html_files
       - echo "--- Содержимое _html_files ---"
       - ls -la _html_files
-      # Копируем файлы принудительно и рекурсивно, указывая явно
+      # Копируем КАЖДЫЙ нужный файл явно, принудительно и рекурсивно
       - echo "--- Копирование файлов ---"
       - cp -rf _html_files/index.html $READTHEDOCS_OUTPUT/html/index.html
       - cp -rf _html_files/style.css $READTHEDOCS_OUTPUT/html/style.css
+      - cp -rf _html_files/ACI.avif $READTHEDOCS_OUTPUT/html/ACI.avif
       # Диагностика: Показываем содержимое целевой директории ПОСЛЕ копирования
       - echo "--- Содержимое $READTHEDOCS_OUTPUT/html/ после копирования ---"
       - ls -la $READTHEDOCS_OUTPUT/html/
