@@ -3,9 +3,9 @@ import os
 import sys
 # Если _html_files лежит рядом с docs/, то путь будет '../_html_files'
 # Если _html_files лежит в корне, а docs/ тоже в корне, путь будет '../_html_files'
-# Возвращаем html_extra_path к копированию всей директории _html_files.
-# Идея в том, что index.html из этой директории перезапишет тот, что сгенерирован из index.rst.
-html_extra_path = ['../_html_files']
+# html_extra_path больше не нужен, так как копирование выполняется
+# через пользовательский шаг сборки в .readthedocs.yaml
+# html_extra_path = ['../_html_files']
 
 # Убираем html_additional_pages, чтобы избежать конфликтов.
 

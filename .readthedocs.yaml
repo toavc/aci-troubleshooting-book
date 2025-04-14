@@ -7,7 +7,13 @@ build:
   os: ubuntu-22.04 # Используем Ubuntu 22.04 LTS
   tools:
     python: "3.11" # Или другая нужная вам версия Python (опционально, но рекомендуется)
-
+  # Добавляем пользовательские шаги сборки
+  jobs:
+    post_build:
+      # Эта команда выполнится ПОСЛЕ сборки Sphinx
+      # Она копирует все содержимое папки _html_files в финальную директорию вывода HTML,
+      # перезаписывая любые файлы, созданные Sphinx (включая index.html).
+      - cp -r _html_files/* $READTHEDOCS_OUTPUT/html/
 # Указываем, что проект использует Sphinx
 sphinx:
   configuration: docs/conf.py  # Путь к вашему conf.py
