@@ -9,7 +9,6 @@ html_extra_path = ['../_html_files'] # <-- Оставляем это, чтобы
 # Ключ - имя страницы без .html (как оно будет в URL), значение - путь к исходному HTML-файлу относительно conf.py
 html_additional_pages = {
     'index': '../_html_files/index.html',  # Говорим использовать наш index.html для корневой страницы
-    'page2': '../_html_files/page2.html',  # Говорим использовать наш page2.html для страницы /page2.html
     # Добавьте сюда другие ваши HTML-страницы по аналогии:
     # 'имя_вашей_страницы': '../_html_files/имя_вашего_файла.html',
 }
