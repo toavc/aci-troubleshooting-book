@@ -1,15 +1,23 @@
-# Версия конфигурационного файла RTD
+# .readthedocs.yaml
+
 version: 2
+
+# Указываем операционную систему для сборки (ВАЖНО!)
+build:
+  os: ubuntu-22.04 # Используем Ubuntu 22.04 LTS
+  tools:
+    python: "3.11" # Или другая нужная вам версия Python (опционально, но рекомендуется)
 
 # Указываем, что проект использует Sphinx
 sphinx:
-  configuration: docs/conf.py  # Путь к нашему conf.py
+  configuration: docs/conf.py  # Путь к вашему conf.py
 
 # Указываем, как установить зависимости Python
 python:
   install:
-    - requirements: requirements.txt # Говорим использовать наш requirements.txt
+    - requirements: requirements.txt # Говорим использовать ваш requirements.txt
 
-# Собираем только HTML формат (не нужны PDF и т.д.)
+# (Опционально) Указываем, какие форматы собирать
 formats:
-  - htmlzip
+ - htmlzip
+ # - pdf # Раскомментируйте, если нужен PDF
