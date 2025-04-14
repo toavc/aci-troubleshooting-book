@@ -1,0 +1,82 @@
+/* Basic Reset / Body Style */
+body {
+    font-family: Arial, sans-serif; /* Simple, common font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text color */
+}
+
+/* Main Container */
+.main-container {
+    width: 80%; /* Limit the width */
+    max-width: 960px; /* Set a max width */
+    margin: 20px auto; /* Center the container horizontally with some top/bottom margin */
+    padding: 20px;
+    background-color: #fff; /* White background for the content area */
+    border: 1px solid #ddd; /* Subtle border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Slight shadow effect */
+}
+
+/* Header */
+header h1 {
+    color: #0056b3; /* A blue color for the main heading */
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Navigation */
+.navigation {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #0056b3;
+    margin: 0 15px; /* Spacing between links */
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.navigation a:hover {
+    background-color: #e9ecef; /* Light background on hover */
+    color: #003d80;
+}
+
+.navigation a.active {
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0; /* Slightly different background for active link */
+}
+
+
+/* Content Blocks */
+.content-block {
+    margin-bottom: 25px; /* Space below each block */
+    padding: 15px;
+    background-color: #fdfdfd; /* Very light background for blocks */
+    border-left: 4px solid #007bff; /* Blue left border for emphasis */
+}
+
+.content-block h2 {
+    color: #333;
+    margin-top: 0; /* Remove default top margin for h2 inside the block */
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}

@@ -1,0 +1,15 @@
+# Версия конфигурационного файла RTD
+version: 2
+
+# Указываем, что проект использует Sphinx
+sphinx:
+  configuration: docs/conf.py  # Путь к нашему conf.py
+
+# Указываем, как установить зависимости Python
+python:
+  install:
+    - requirements: requirements.txt # Говорим использовать наш requirements.txt
+
+# Собираем только HTML формат (не нужны PDF и т.д.)
+formats:
+  - htmlzip
