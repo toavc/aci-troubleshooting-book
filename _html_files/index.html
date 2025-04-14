@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACI Troubleshooting Book</title>
+    <title>Cisco ACI Troubleshooting Resources Hub</title>
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,57 +13,105 @@
         <aside class="sidebar">
             <h2>Navigation</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#common-issues">Common Issues</a></li>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#official-docs">Official Docs</a></li>
+                <li><a href="#learning">Learning</a></li>
                 <li><a href="#tools">Tools</a></li>
-                <li><a href="#fabric-discovery">Fabric Discovery</a></li>
-                <li><a href="#endpoint-connectivity">Endpoint Connectivity</a></li>
-                <!-- Add more links as needed -->
+                <li><a href="#community">Community</a></li>
+                <li><a href="#related-books">Related Books</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <header>
-                <h1>ACI Troubleshooting Book</h1>
-                <p>A practical guide to troubleshooting Cisco ACI</p>
+                <h1>Cisco ACI Troubleshooting Resources Hub</h1>
+                 <!-- ACI Logo Centered -->
+                 <div style="text-align: center; margin-bottom: 20px;">
+                   <img src="ACI.avif" alt="ACI Logo" style="max-width: 80%; height: auto;">
+                 </div>
             </header>
 
-            <!-- ACI Logo Centered -->
-            <div style="text-align: center; margin-bottom: 20px;">
-              <img src="ACI.avif" alt="ACI Logo" style="max-width: 80%; height: auto;">
-            </div>
-
-            <div class="content-block" id="introduction">
-                <h2>Introduction to ACI Troubleshooting</h2>
+            <div class="content-block" id="welcome">
+                <h2>Welcome to the ACI Troubleshooting Resources Center</h2>
                 <p>
-                    Cisco Application Centric Infrastructure (ACI) is a powerful Software-Defined Networking (SDN) solution, but like any complex system, it requires a systematic approach to troubleshooting. Understanding the core ACI components, such as APIC, Spine, Leaf, EPGs, and Contracts, is the first step towards effective diagnostics.
-                </p>
-                <p>
-                    This resource is intended for network engineers working with ACI and provides information on common problems, diagnostic methods, and useful tools. We will cover both fabric-level issues and complexities related to endpoint connectivity and policy enforcement.
+                    This page serves as a central hub for the latest resources related to Cisco Application Centric Infrastructure (ACI) troubleshooting. The content previously found at this location has been reorganized and updated. Please use the links below to access current documentation and resources.
                 </p>
             </div>
 
-            <div class="content-block" id="common-issues">
-                <h2>Common Troubleshooting Scenarios</h2>
-                <p>
-                    When working with ACI, engineers often encounter a set of typical problems. These include:
-                </p>
+            <div class="content-block" id="official-docs">
+                <h2>Official Documentation</h2>
+                <h3>ACI Troubleshooting Book (2nd Edition)</h3>
+                <p>The comprehensive ACI Troubleshooting Book (2nd Edition) released in early 2020 is now available as individual documents for easier navigation:</p>
                 <ul>
-                    <li>Fabric Discovery Issues.</li>
-                    <li>Lack of connectivity between Endpoints within the same or different EPGs.</li>
-                    <li>Incorrect application of Contracts and Filters.</li>
-                    <li>Problems with L4-L7 service integration.</li>
-                    <li>Difficulties connecting to external networks (L3Out).</li>
-                    <li>APIC configuration errors or policy faults.</li>
+                    <li><a href="https://www.cisco.com/c/en/us/support/cloud-systems-management/application-policy-infrastructure-controller-apic/tsd-products-support-troubleshoot-and-alerts.html" target="_blank" rel="noopener noreferrer">ACI Troubleshooting Guide - Main Portal</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/application-policy-infrastructure-controller-apic/215728-troubleshooting-cisco-application-centr.html" target="_blank" rel="noopener noreferrer">TAC-Authored Troubleshooting Guides</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/all/faults-events/current-release/b_APIC_Faults_and_Error_Messages.html" target="_blank" rel="noopener noreferrer">APIC Fault Reference Guide</a></li>
                 </ul>
-                 <p>
-                    Each of these problems has its own diagnostic techniques, involving checking object states in the GUI/CLI/API, analyzing logs, and using built-in ACI tools like the <strong>Endpoint Tracker</strong> or the <strong>Troubleshooting Wizard</strong>.
-                </p>
+                <h3>Topic-Specific Troubleshooting Guides</h3>
+                <ul>
+                    <li><a href="https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/application-policy-infrastructure-controller-apic/213995-troubleshooting-cisco-aci-fabric-discov.html" target="_blank" rel="noopener noreferrer">Fabric Discovery Issues</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/application-policy-infrastructure-controller-apic/217382-troubleshoot-aci-endpoint-connectivity.html" target="_blank" rel="noopener noreferrer">Endpoint Connectivity Issues</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/application-policy-infrastructure-controller-apic/214895-troubleshoot-cisco-aci-apic-cluster-iss.html" target="_blank" rel="noopener noreferrer">APIC Cluster Management</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/application-policy-infrastructure-controller-apic/217535-troubleshooting-aci-multi-site-issues.html" target="_blank" rel="noopener noreferrer">Multi-Site Deployments</a></li>
+                </ul>
+            </div>
+
+            <div class="content-block" id="learning">
+                <h2>Learning Resources</h2>
+                <h3>Training & Certification</h3>
+                <ul>
+                    <li><a href="https://learningnetwork.cisco.com/s/dcacia" target="_blank" rel="noopener noreferrer">DCACIA (300-630) Certification</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/training-events/training-certifications/training/training-services/courses/implementing-cisco-application-centric-infrastructure-advanced-dcacia.html" target="_blank" rel="noopener noreferrer">Implementing Cisco Application Centric Infrastructure - Advanced</a></li>
+                    <li><a href="https://developer.cisco.com/learning/tracks/aci-programmability/" target="_blank" rel="noopener noreferrer">DevNet ACI Learning Track</a></li>
+                </ul>
+                <h3>Video Resources</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PL_RJ3HclrYc5oRUe3cUb2kdMKpW0wvpUC" target="_blank" rel="noopener noreferrer">ACI Troubleshooting Video Series</a></li>
+                    <li><a href="https://www.ciscolive.com/on-demand/on-demand-library.html?search=ACI#/" target="_blank" rel="noopener noreferrer">Cisco Live On-Demand Library - ACI Sessions</a></li>
+                </ul>
+            </div>
+
+            <div class="content-block" id="tools">
+                <h2>Tools & Utilities</h2>
+                <ul>
+                    <li><a href="https://software.cisco.com/download/home/286278832/type/286278852/release/" target="_blank" rel="noopener noreferrer">ACI Simulator Downloads</a></li>
+                    <li><a href="https://dcappcenter.cisco.com/aci-app-center.html" target="_blank" rel="noopener noreferrer">ACI App Center</a></li>
+                    <li><a href="https://github.com/datacenter/acitoolkit" target="_blank" rel="noopener noreferrer">ACI Toolkit on GitHub</a></li>
+                    <li><a href="https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/Operating_ACI/guide/b_Cisco_Operating_ACI/b_Cisco_Operating_ACI_chapter_01001.html" target="_blank" rel="noopener noreferrer">Visore Object Browser Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="content-block" id="community">
+                <h2>Community & Support</h2>
+                <h3>Forums & Communities</h3>
+                <ul>
+                    <li><a href="https://community.cisco.com/t5/application-centric/bd-p/application-centric-infrastructure-discussions" target="_blank" rel="noopener noreferrer">Cisco Community - ACI Discussions</a></li>
+                    <li><a href="https://developer.cisco.com/aci/" target="_blank" rel="noopener noreferrer">DevNet ACI Community</a></li>
+                    <li><a href="https://stackoverflow.com/questions/tagged/cisco-aci" target="_blank" rel="noopener noreferrer">Stack Overflow - ACI Tag</a></li>
+                </ul>
+                <h3>Support Resources</h3>
+                <ul>
+                    <li><a href="https://mycase.cloudapps.cisco.com/case" target="_blank" rel="noopener noreferrer">Cisco Support Case Manager</a></li>
+                    <li><a href="https://tools.cisco.com/ServiceRequestTool/scm/mgmt/case" target="_blank" rel="noopener noreferrer">TAC Service Request Tool</a></li>
+                    <li><a href="https://bst.cloudapps.cisco.com/bugsearch/" target="_blank" rel="noopener noreferrer">Bug Search Tool</a></li>
+                </ul>
+            </div>
+
+            <div class="content-block" id="related-books">
+                <h2>Related Books</h2>
+                <ul>
+                    <li><a href="https://www.ciscopress.com/store/aci-advanced-monitoring-and-troubleshooting-9780136596066" target="_blank" rel="noopener noreferrer">ACI Advanced Monitoring and Troubleshooting</a></li>
+                    <li><a href="https://www.packtpub.com/product/cisco-aci-cookbook/9781484228684" target="_blank" rel="noopener noreferrer">Cisco ACI Cookbook</a></li>
+                    <li><a href="https://www.ciscopress.com/store/cisco-digital-network-architecture-intent-based-networking-9780136533177" target="_blank" rel="noopener noreferrer">Cisco Digital Network Architecture: Intent-based Networking for the Enterprise</a></li>
+                </ul>
             </div>
 
             <footer>
-                <p>© 2025 Andres Vega</p>
-            </footer>
+                <hr>
+                <p><em>This resource hub is regularly updated to provide the most current information. Last updated: April 2025.</em></p>
+                <p><em>For questions about this redirect page or suggestions for additional resources, please contact the documentation team at <a href="mailto:documentation-feedback@cisco.com">documentation-feedback@cisco.com</a>.</em></p>
+                 <p>© 2025 Andres Vega</p>
+           </footer>
         </main>
     </div>
 
