@@ -10,10 +10,19 @@ build:
   # Добавляем пользовательские шаги сборки
   jobs:
     post_build:
-      # Эта команда выполнится ПОСЛЕ сборки Sphinx
-      # Она копирует все содержимое папки _html_files в финальную директорию вывода HTML,
-      # перезаписывая любые файлы, созданные Sphinx (включая index.html).
-      - cp -r _html_files/* $READTHEDOCS_OUTPUT/html/
+      # Диагностика: Показываем содержимое текущей директории перед копированием
+      - echo "--- Содержимое текущей директории перед копированием ---"
+      - ls -la
+      # Диагностика: Показываем содержимое _html_files
+      - echo "--- Содержимое _html_files ---"
+      - ls -la _html_files
+      # Копируем файлы принудительно и рекурсивно, указывая явно
+      - echo "--- Копирование файлов ---"
+      - cp -rf _html_files/index.html $READTHEDOCS_OUTPUT/html/index.html
+      - cp -rf _html_files/style.css $READTHEDOCS_OUTPUT/html/style.css
+      # Диагностика: Показываем содержимое целевой директории ПОСЛЕ копирования
+      - echo "--- Содержимое $READTHEDOCS_OUTPUT/html/ после копирования ---"
+      - ls -la $READTHEDOCS_OUTPUT/html/
 # Указываем, что проект использует Sphinx
 sphinx:
   configuration: docs/conf.py  # Путь к вашему conf.py
